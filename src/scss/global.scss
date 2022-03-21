@@ -1,0 +1,270 @@
+    @import "vars";
+    @import "mixins";
+    @import "fonts";
+    @import "settings";
+    .burger {
+        --burger-width: 22px;
+        --burger-height: 22px;
+        --burger-line-height: 4px;
+        @include burger;
+    }
+    
+    @include desktop {
+        .sets {
+            &__list {
+                gap: 17px;
+            }
+        }
+        .container {
+            padding: 0 50px;
+        }
+    }
+    
+    @include tablet {
+        .sets {
+            &__list {
+                gap: 29px;
+            }
+            &__item {
+                flex: 0 0 48%;
+            }
+            &__row {
+                padding: 135px 0 95px;
+            }
+            &__title {
+                max-width: 70%;
+                padding-bottom: 97px;
+            }
+        }
+        .performance {
+            background-image: url(../img/performance-tablet.jpg);
+            &__row {
+                justify-content: center;
+                padding: 28em 0 36px;
+            }
+            &__title,
+            &__text {
+                text-align: center;
+            }
+            &__column {
+                max-width: 100%;
+            }
+        }
+        .sustainability {
+            &__column {
+                padding: 166px 0 111px;
+                align-items: center;
+                max-width: 100%;
+            }
+            &__title,
+            &__text {
+                text-align: center;
+            }
+        }
+        .envolved {
+            &__column {
+                padding: 125px 0 130px;
+            }
+            &__title {
+                margin-bottom: 116px;
+            }
+            &__item {
+                flex: 0 0 48%;
+                margin-bottom: 60px;
+            }
+            &__list {
+                justify-content: center;
+                gap: 29px;
+            }
+            &__btns {
+                margin-top: 30px;
+            }
+        }
+        .footer {
+            &__row {
+                justify-content: center;
+                &:first-child {
+                    padding: 100px 0 83px;
+                }
+                &:last-child {
+                    flex-flow: column;
+                    align-items: center;
+                    gap: 15px;
+                }
+            }
+            &__loc-row {
+                justify-content: space-between;
+                margin-top: 95px;
+            }
+            &__contact,
+            &__loc {
+                align-items: center;
+            }
+            &__subtitle {
+                text-align: center;
+            }
+        }
+    }
+    
+    @include mobile {
+        .container {
+            padding: 0 24px;
+        }
+        .header {
+            &__logo {
+                img {
+                    min-width: 120px;
+                    max-width: 120px;
+                }
+            }
+            &__btn {
+                button {
+                    min-width: 150px;
+                }
+            }
+            &__row {
+                padding-top: 25px;
+            }
+            &__wrapper {
+                max-width: 100%;
+                padding: 192px 0 268px;
+            }
+            &__title {
+                font-size: 32px;
+                line-height: 42px;
+                text-align: center;
+                max-width: 82%;
+                margin: 0 auto;
+            }
+            &__subtitle {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 28px;
+                text-align: center;
+                padding: 25px 0 0;
+                margin: 0 auto;
+                max-width: 90%;
+            }
+            &__screen {
+                &::after {
+                    bottom: 42px;
+                }
+            }
+        }
+        .performance {
+            background-image: url(../img/performance-mobile.jpg);
+            &__row {
+                justify-content: center;
+                padding: 20em 0 36px;
+            }
+            &__title,
+            &__text {
+                text-align: center;
+            }
+            &__title {
+                padding-bottom: 20px;
+            }
+            &__text {
+                font-size: 16px;
+                padding-bottom: 10px;
+            }
+            &__column {
+                max-width: 95%;
+            }
+        }
+        .sets {
+            &__list {
+                gap: 29px;
+                justify-content: center;
+            }
+            &__item {
+                flex: 0 0 100%;
+                margin-bottom: 36px;
+            }
+            &__row {
+                padding: 64px 0 35px;
+            }
+            &__title {
+                max-width: 100%;
+                padding-bottom: 80px;
+                line-height: 42px;
+            }
+        }
+        .sustainability {
+            background-image: url(../img/sustainability-mobile.jpg);
+            &__column {
+                padding: 75px 0 27px;
+                align-items: center;
+                max-width: 100%;
+            }
+            &__title,
+            &__text {
+                text-align: center;
+            }
+        }
+        .envolved {
+            &__column {
+                padding: 76px 0;
+            }
+            &__title {
+                margin-bottom: 87px;
+                line-height: 42px;
+            }
+            &__item {
+                flex: 0 0 100%;
+                margin-bottom: 35px;
+            }
+            &__list {
+                justify-content: center;
+                gap: 29px;
+            }
+            &__btns {
+                margin-top: 30px;
+                flex-flow: column;
+            }
+        }
+        .footer {
+            &__row {
+                justify-content: center;
+                &:first-child {
+                    padding: 100px 0;
+                }
+                &:last-child {
+                    gap: 25px;
+                }
+            }
+            &__loc-row {
+                flex-flow: column;
+                margin-top: 95px;
+                width: 75%;
+                justify-content: center;
+            }
+            &__loc {
+                align-items: center;
+                margin-bottom: 45px;
+            }
+            &__subtitle {
+                text-align: center;
+            }
+            &__copyright {
+                text-align: center;
+                width: 60%;
+            }
+            &__links {
+                a {
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+        ol {
+            padding-left: 20px;
+        }
+    }
+    
+    @media (max-width: 320px) {
+        .header__btn button {
+            min-width: 130px;
+        }
+    }

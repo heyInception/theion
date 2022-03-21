@@ -1,0 +1,92 @@
+.header {
+    background-color: #000;
+    position: relative;
+    background-image: url(../../img/screen.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    &_content {
+        background-image: url(../../img/screen-home.jpg);
+    }
+    &__row {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 51px;
+    }
+    &__logo {
+        img {
+            min-width: 150px;
+            max-width: 150px;
+        }
+    }
+    &__screen {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 64px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-image: url(../../img/arrow.svg);
+            background-repeat: no-repeat;
+            width: 30px;
+            height: 16px;
+            z-index: 9999;
+        }
+        &_content {
+            &::after {
+                content: none;
+            }
+        }
+    }
+    &__btn {
+        button {
+            background-color: transparent;
+            border: 2px solid #fff;
+            border-radius: 6px;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 25px;
+            letter-spacing: 0em;
+            text-align: center;
+            height: 50px;
+            min-width: 158px;
+            width: 100%;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        flex-flow: column;
+        color: #fff;
+        padding: 182px 0 291px;
+        max-width: 700px;
+        width: 100%;
+        margin: 0 auto;
+        &_content {
+            padding: 127px 0 117px;
+        }
+    }
+    &__title {
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 70px;
+        letter-spacing: 0em;
+        text-align: center;
+        text-shadow: 0 1px 10px black;
+    }
+    &__subtitle {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 38px;
+        letter-spacing: 0em;
+        text-align: center;
+        padding: 6px 0 0;
+        text-shadow: 0 1px 10px black;
+    }
+}

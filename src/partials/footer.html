@@ -1,0 +1,36 @@
+<footer class="footer">
+    <div class="container">
+        <div class="footer__row">
+            <div class="footer__logo"><img src="../img/footer-logo.png" alt="" srcset="../img/footer-logo@2x.png 2x"></div>
+            <div class="footer__loc-row">
+                <div class="footer__loc">
+                    <div class="footer__title">​Theion GmbH</div>
+                    <div class="footer__subtitle">Fanny-Zobel-Strasse 11 12435 Berlin</div>
+                </div>
+                <div class="footer__contact">
+                    <div class="footer__title">Contact us</div>
+                    <div class="footer__subtitle">
+                        <a href="tel:+49 30 55622677">+49 30 55622677</a>
+                        <a href="mailto:info@theion.de">info@theion.de</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__row">
+            <div class="footer__copyright">Copyright © 2021. Alle Rechte vorbehalten.</div>
+            <div class="footer__links">
+                <a href="">Imprint</a>
+                <a href="">Privacy policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    const burger = document.querySelector('.burger');
+    const navi = document.querySelector('.header__menu');
+
+    burger.addEventListener('click', (e) => {
+        e.currentTarget.classList.toggle('burger--active');
+        navi.classList.toggle('header__menu_open');
+    });
+</script>

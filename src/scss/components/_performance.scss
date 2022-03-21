@@ -1,0 +1,55 @@
+.performance {
+    background-image: url(../../img/performance.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: right;
+    background-color: #000;
+    &__row {
+        display: flex;
+        flex-flow: row;
+        padding: 286px 0 262px;
+    }
+    &__column {
+        display: flex;
+        flex-flow: column;
+        max-width: 576px;
+    }
+    &__title {
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 57px;
+        letter-spacing: 0em;
+        text-align: left;
+        padding-bottom: 32px;
+        color: #fff;
+    }
+    &__text {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: left;
+        padding-bottom: 26px;
+        color: #fff;
+    }
+    &__btn {
+        padding-top: 11px;
+        button {
+            cursor: pointer;
+            max-width: 234px;
+            width: 100%;
+            height: 58px;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px;
+            letter-spacing: 0em;
+            text-align: center;
+            border: 1px solid #000;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+    }
+}
